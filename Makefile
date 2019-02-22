@@ -55,7 +55,7 @@ DEFAULT_PROGRESS = $(S_PRE)$(COLOR_RED);$(BACKGROUND_DARK_GRAY)$(S_POST)
 INC_DIR = inc
 OBJ_DIR = obj
 SRC_DIR = src
-FRMWK_DIR = frameworks
+FRMWK_DIR = frmwrk
 
 INIT_DIR = init
 ERROR_DIR = error
@@ -74,6 +74,28 @@ HOME =  $(shell pwd)/Frameworks
 FRMWK = -framework SDL2 -framework SDL2_image -framework SDL2_ttf -F ./$(FRMWK_DIR) -rpath $(HOME)
 
 CC = clang $(FLAGS) $(INC)
+
+
+## Test compilation differente
+
+
+FRAMEWORKS = -framework SDL2 -framework SDL2_image -framework SDL2_ttf -F ./$(FRMWK_DIR) -rpath $(HOME)
+LIBRARIES =
+
+
+INC_FRAMEWORKS = -F ./$(FRMWK_DIR)
+
+# FAST = -Ofast
+# DEBUG = -g3 -fsanitize=address
+# CFLAGS = -Wall -Wextra -Werror $(FAST) $(DEBUG) -D_REENTRANT -D_THREAD_SAFE
+
+# LDFLAGS = $(LIBRARIES) $(FRAMEWORKS)
+
+# CC = clang $(CFLAGS) $(INC)
+# EXEC =
+
+## fin de test
+
 
 ## List of Functions
 
@@ -119,7 +141,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@echo "$(@)" >> log_objects
 	@echo "\0033[1A$(BAR)"
 
-$(NAME): $(OBJ_DIRS) $(SRC) $(INCLUDES)
+$(NAME): $(OBJ_DIRS) $(SRC) $(INCLUDES) $(FRMWK_DIR)
 	@touch log_objects
 	@echo "Creating objects ...\n"
 	@$(MAKE) -j --silent $(OBJ)
@@ -137,7 +159,12 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "$(COLOR_MESSAGE)$(NAME)$(TARGET)[Deleted]$(S_RESET)"
 
+aclean: fclean
+	@rm -rf ./$(FRMWK_DIR)
+
 re: fclean all
+
+are: aclean all
 
 norme:
 	@norminette $(SRC) $(INC_DIR)/
@@ -145,11 +172,11 @@ norme:
 bar:
 	@echo "\0033[1A$(BAR)"
 
-frameworks_clean:
-	@rm -rf ./$(FRMWK_DIR)
-
-frameworks: frameworks_clean
+$(FRMWK_DIR):
 	@mkdir ./$(FRMWK_DIR)
+	@$(MAKE) -j --silent frameworks
+
+frameworks:
 	curl -o SDL2 https://www.libsdl.org/release/SDL2-2.0.8.dmg
 	curl -o SDL2_image https://www.libsdl.org/projects/SDL_image/release/SDL2_image-2.0.3.dmg
 	curl -o SDL2_ttf https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.14.dmg
@@ -166,4 +193,4 @@ frameworks: frameworks_clean
 	rm -rf SDL2_image
 	rm -rf SDL2_ttf
 
-.PHONY: all clean fclean re norme bar frameworks frameworks_clean
+.PHONY: all clean fclean re are norme bar frameworks
