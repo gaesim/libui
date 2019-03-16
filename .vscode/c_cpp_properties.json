@@ -10,7 +10,8 @@
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
                 "/Library/Frameworks",
-                "${workspaceRoot}/frameworks"
+                "${workspaceRoot}/frameworks",
+                "${workspaceFolder}/frmwrk"
             ],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
