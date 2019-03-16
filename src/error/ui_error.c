@@ -6,7 +6,7 @@
 /*   By: gsimeon <gsimeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 06:03:48 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/01/31 07:12:43 by gsimeon          ###   ########.fr       */
+/*   Updated: 2019/03/16 20:13:21 by gsimeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ int ui_error(Uint32 error, char *file, int line)
 	const char	*geterror;
 
 	geterror = SDL_GetError();
-	SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "ui_error called at <\033[31m%s\033[0m::\033[31m%d\033[0m>\n", file, line);
+	SDL_LogError(SDL_LOG_CATEGORY_APPLICATION,
+		"%s called at <\033[31m%s\033[0m::\033[31m%d\033[0m>\n",
+		__func__, file, line);
 	if (geterror != NULL)
 	{
 		SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL say : %s", geterror);
