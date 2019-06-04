@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ui_init.c                                          :+:      :+:    :+:   */
+/*   ui_define.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsimeon <gsimeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/31 01:22:35 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/04/07 18:56:20 by gsimeon          ###   ########.fr       */
+/*   Created: 2019/04/07 18:42:07 by gsimeon           #+#    #+#             */
+/*   Updated: 2019/04/07 18:43:11 by gsimeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libui.h"
-#include "stdio.h"
+#ifndef UI_DEFINE_H
+# define UI_DEFINE_H
 
-int ui_init(void)
-{
-	if (SDL_Init(SDL_INIT_EVERYTHING) == 0)
-		return(ui_error(1, __FILE__, __func__, __LINE__));
-	return (0);
-}
+#endif

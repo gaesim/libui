@@ -6,7 +6,7 @@
 /*   By: gsimeon <gsimeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 01:02:30 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/01/31 07:06:21 by gsimeon          ###   ########.fr       */
+/*   Updated: 2019/04/07 18:55:53 by gsimeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ui_init(void);
 **		error
 */
 
-int		ui_error(Uint32 error, char *file, int line);
+int     ui_error(Uint32 error, const char *file, const char *func, const int line);
 int		ui_exit(Uint32 error);
 
 
