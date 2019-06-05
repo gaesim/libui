@@ -99,12 +99,14 @@ INC_FRAMEWORKS = -F ./$(FRMWK_DIR)
 
 ## List of Functions
 
-INCLUDE_H = libui
+INCLUDE_H = libui \
+			ui_struct
 
-INIT_FT = ui_init
+INIT_FT = ui_init \
+		  ui_window
 
 ERROR_FT = ui_error \
-			ui_exit
+			ui_exit 
 
 ## List of Utilities
 

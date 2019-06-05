@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ui_init.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsimeon <gsimeon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 01:22:35 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/04/07 18:56:20 by gsimeon          ###   ########.fr       */
+/*   Updated: 2019/06/05 19:04:20 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libui.h"
-#include "stdio.h"
+// #include "stdio.h"
 
 int ui_init(void)
 {

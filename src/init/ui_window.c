@@ -1,41 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libui.h                                            :+:      :+:    :+:   */
+/*   ui_window.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/31 01:02:30 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/06/05 18:09:49 by aberrahm         ###   ########.fr       */
+/*   Created: 2019/06/05 18:06:43 by aberrahm          #+#    #+#             */
+/*   Updated: 2019/06/05 18:06:46 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef LIBUI_H
-# define LIBUI_H
-
-/*
-** includes from SDL2
-*/
-
-# include <SDL2/SDL.h>
-# include <SDL2_image/SDL_image.h>
-# include <SDL2_ttf/SDL_ttf.h>
-# include "ui_struct.h"
-# include "ui_define.h"
-
-/*
-**		init
-*/
-
-int		ui_init(void);
-
-/*
-**		error
-*/
-
-int     ui_error(Uint32 error, const char *file, const char *func, const int line);
-int		ui_exit(Uint32 error);
-
-
-#endif
