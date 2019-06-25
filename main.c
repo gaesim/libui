@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsimeon <gsimeon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 21:39:38 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/04/08 21:39:40 by gsimeon          ###   ########.fr       */
+/*   Updated: 2019/06/25 02:52:18 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ int main()
 	SDL_DisplayMode		mode;
 	// SDL_Window	win;
 	int			di;
+	t_coord xy;
+	t_coord wh;
 	ui_init();
+	create_window(xy, wh);
 
 
 	int val = SDL_GetNumDisplayModes(0);

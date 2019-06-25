@@ -6,7 +6,7 @@
 /*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 18:08:18 by aberrahm          #+#    #+#             */
-/*   Updated: 2019/06/05 19:43:13 by aberrahm         ###   ########.fr       */
+/*   Updated: 2019/06/25 02:36:05 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,19 @@ typedef struct s_coord
 {
     int     x;
     int     y;
+    int     w;
+    int     h;
     /* data */
 }              t_coord;
 
 typedef struct s_sdl
 {
     SDL_Window  *win;
-
 }               t_sdl;
 
 //enum des flags de la fenetre (ne sont pas tous presents, notamment ceux concernant l opengl)
 
-typedef enum win_flags win_flags;
+typedef enum win_flags flags;
 enum    win_flags
 {
     FL0 = SDL_WINDOW_FULLSCREEN,
