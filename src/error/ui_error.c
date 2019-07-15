@@ -6,25 +6,22 @@
 /*   By: gsimeon <gsimeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 06:03:48 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/04/07 19:44:42 by gsimeon          ###   ########.fr       */
+/*   Updated: 2019/07/15 22:44:28 by gsimeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libui.h"
 
 /*
-**
 ** Usage :
 ** call it like this everywere
 ** return(ui_error(<YOUR_ERROR_CODE>, __FILE__, __LINE__));
 **
 ** Code Explained :
 **  SDL_GetError retrieve a message about error inside SDL
-**
-**
 */
 
-int ui_error(Uint32 error, const char *file, const char *func, const int line)
+int	ui_error(Uint32 error, const char *file, const char *func, const int line)
 {
 	const char	*geterror;
 
