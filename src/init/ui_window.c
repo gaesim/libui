@@ -6,7 +6,7 @@
 /*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 18:06:43 by aberrahm          #+#    #+#             */
-/*   Updated: 2019/06/25 02:49:57 by aberrahm         ###   ########.fr       */
+/*   Updated: 2019/06/26 01:11:35 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,24 @@
 // besoin de l initialisation pour creer la fenetre mais fonction doit etre independante.
 // pour les flags de la fonction voir sdl_video.h
 
-int   create_window(t_coord xy, t_coord wh)
-{
-    t_sdl  *all;
+// int   create_window(t_coord xy, t_coord wh)
+// {
+//     t_sdl  *all;
 
-    all = NULL;
-    xy.x = SDL_WINDOWPOS_UNDEFINED;
-    xy.y = SDL_WINDOWPOS_UNDEFINED;
-    wh.w = 800;
-    wh.h = 400;
-    if (ui_init() == 0)
-        return (ui_error(1, __FILE__, __func__, __LINE__));
-    else
-    all->win = SDL_CreateWindow("Ma fenetre", xy.x, xy.y, wh.w, wh.h, FL0);
+//     all = NULL;
+//     xy.x = SDL_WINDOWPOS_UNDEFINED;
+//     xy.y = SDL_WINDOWPOS_UNDEFINED;
+//     wh.w = 800;
+//     wh.h = 400;
+//     if (ui_init() == 0)
+//         return (ui_error(1, __FILE__, __func__, __LINE__));
+//     else
+//     all->win = SDL_CreateWindow("Ma fenetre", xy.x, xy.y, wh.w, wh.h, FL0);
 
-    return(0);
-}
+//     return(0);
+// }
+
+// int ui_create_window(int w, int h, )
+// {
+
+// }

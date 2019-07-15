@@ -6,7 +6,7 @@
 /*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 21:39:38 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/06/25 02:52:18 by aberrahm         ###   ########.fr       */
+/*   Updated: 2019/06/26 01:32:43 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ int main()
 	t_coord xy;
 	t_coord wh;
 	ui_init();
-	create_window(xy, wh);
-
+	// create_window(xy, wh);
 
 	int val = SDL_GetNumDisplayModes(0);
 	if ((di = SDL_GetWindowDisplayIndex(SDL_CreateWindow("test", 0, 0 ,200 ,200, 0))) == -1)

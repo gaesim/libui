@@ -6,7 +6,7 @@
 /*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 01:02:30 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/06/25 02:41:14 by aberrahm         ###   ########.fr       */
+/*   Updated: 2019/06/26 01:20:31 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		ui_init(void);
 /*
 **		error
 */
-int     create_window(t_coord xy, t_coord wh);
+// int     create_window(t_coord xy, t_coord wh);
 int     ui_error(Uint32 error, const char *file, const char *func, const int line);
 int		ui_exit(Uint32 error);
 
