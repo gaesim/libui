@@ -6,7 +6,7 @@
 /*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 18:08:18 by aberrahm          #+#    #+#             */
-/*   Updated: 2020/02/15 19:26:12 by aberrahm         ###   ########.fr       */
+/*   Updated: 2020/02/15 20:20:07 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ typedef struct      s_sdl
 {
     SDL_Window      *win;
     SDL_Renderer    *render;
+    SDL_Texture     *tex;
+	SDL_Surface     *surf;
 }                   t_sdl;
 
 //enum des flags de la fenetre (ne sont pas tous presents, notamment ceux concernant l opengl)
