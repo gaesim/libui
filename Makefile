@@ -70,7 +70,7 @@ FLAGS = -Wall -Wextra -Werror $(FAST) $(DEBUG) -D_REENTRANT
 INC = $(INC_DIR:%=-I ./%)
 INC_FRMWK = -D_THREAD_SAFE -F ./$(FRMWK_DIR)
 
-HOME =  $(shell pwd)/Frameworks
+HOME =  $(shell pwd)/$(FRMWK_DIR)
 FRMWK = -framework SDL2 -framework SDL2_image -framework SDL2_ttf -F ./$(FRMWK_DIR) -rpath $(HOME)
 
 CC = clang $(FLAGS) $(INC)
