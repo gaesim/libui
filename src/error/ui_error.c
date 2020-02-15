@@ -6,7 +6,7 @@
 /*   By: gsimeon <gsimeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 06:03:48 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/07/15 22:44:28 by gsimeon          ###   ########.fr       */
+/*   Updated: 2019/07/21 21:53:43 by gsimeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,15 @@
 
 int	ui_error(Uint32 error, const char *file, const char *func, const int line)
 {
-	const char	*geterror;
+	const char	*geterror = "test";
 
 	geterror = SDL_GetError();
-	SDL_LogError(SDL_LOG_CATEGORY_APPLICATION,
-		"%s() called from \033[31m\"\
-\033[33m%s()\033[31m:\
-:\033[34m./%s\033[31m:\
-:\033[33m%d\033[31m\
-\"\033[0m\n",
+	SDL_LogWarn(SDL_LOG_CATEGORY_APPLICATION,
+		"\033[33m%s()\033[37m called from \033[31m\033[33m%s()\033[31m::"
+		"\033[34m./%s\033[31m::\033[33m%d\033[31m\033[0m\n",
 		__func__, func, file, line);
 	if (geterror != NULL)
-	{
 		SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL say : %s", geterror);
-		SDL_ClearError();
-	}
+	SDL_ClearError();
 	return (ui_exit(error));
 }
