@@ -6,7 +6,7 @@
 /*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 01:02:30 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/06/26 01:20:31 by aberrahm         ###   ########.fr       */
+/*   Updated: 2020/02/15 20:07:14 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 ** includes from SDL2
 */
 
-# include <SDL2/SDL.h>
-# include <SDL2_image/SDL_image.h>
-# include <SDL2_ttf/SDL_ttf.h>
+# include "SDL2/SDL.h"
+# include "SDL2_image/SDL_image.h"
+# include "SDL2_ttf/SDL_ttf.h"
 # include "ui_struct.h"
 # include "ui_define.h"
 

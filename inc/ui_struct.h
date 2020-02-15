@@ -6,7 +6,7 @@
 /*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 18:08:18 by aberrahm          #+#    #+#             */
-/*   Updated: 2019/06/25 02:36:05 by aberrahm         ###   ########.fr       */
+/*   Updated: 2020/02/15 19:26:12 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ typedef struct s_coord
     /* data */
 }              t_coord;
 
-typedef struct s_sdl
+typedef struct      s_sdl
 {
-    SDL_Window  *win;
-}               t_sdl;
+    SDL_Window      *win;
+    SDL_Renderer    *render;
+}                   t_sdl;
 
 //enum des flags de la fenetre (ne sont pas tous presents, notamment ceux concernant l opengl)
 
