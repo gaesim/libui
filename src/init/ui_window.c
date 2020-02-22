@@ -6,7 +6,7 @@
 /*   By: aberrahm <aberrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 18:06:43 by aberrahm          #+#    #+#             */
-/*   Updated: 2020/02/15 19:00:38 by aberrahm         ###   ########.fr       */
+/*   Updated: 2020/02/22 20:07:12 by aberrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,31 @@
 // besoin de l initialisation pour creer la fenetre mais fonction doit etre independante.
 // pour les flags de la fonction voir sdl_video.h
 
-void    ui_create_window()
-{}
+// taille de la fenêtre en argument, parametres lors de l'appel a la fonction ????
 
-// int   create_window(t_coord xy, t_coord wh)
-// {
-//     t_sdl  *all;
+t_ui_window		ui_create_window(t_create_win *params)
+{
+	t_ui_window		data;
 
-//     all = NULL;
-//     xy.x = SDL_WINDOWPOS_UNDEFINED;
-//     xy.y = SDL_WINDOWPOS_UNDEFINED;
-//     wh.w = 800;
-//     wh.h = 400;
-//     if (ui_init() != 0)
-//         return (ui_error(1, __FILE__, __func__, __LINE__));
-//     else
-//     all->win = SDL_CreateWindow("Ma fenetre", xy.x, xy.y, wh.w, wh.h, FL0);
+    data.win = SDL_CreateWindow(
+		params->title,
+		params->pos_x, params->pos_y,
+		params->width, params->height,
+		params->flags_win
+	);
 
-//     return(0);
-// }
+// le "-1" second param de la fonction create renderer est un driver qui doit être initialisé. 
+// Pour le moment on laisse par défaut 
 
-// int ui_create_window(int w, int h, )
-// {
+	data.render = SDL_CreateRenderer(
+		data.win,
+		-1,
+		params->flags_render
+	);
 
-// }
+	data.surf = IMG_Load(
+		params->img_path
+	);
+
+	return (data);
+}
