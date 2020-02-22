@@ -6,7 +6,7 @@
 /*   By: gsimeon <gsimeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 01:02:30 by gsimeon           #+#    #+#             */
-/*   Updated: 2019/04/07 18:55:53 by gsimeon          ###   ########.fr       */
+/*   Updated: 2020/02/22 21:16:28 by gsimeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 */
 
 int		ui_init(void);
+int     ui_log_category(int new_category);
 
 /*
 **		error

@@ -104,7 +104,8 @@ INCLUDE_H = libui
 INIT_FT = ui_init
 
 ERROR_FT = ui_error \
-			ui_exit
+			ui_exit \
+			ui_log_category
 
 ## List of Utilities
 
